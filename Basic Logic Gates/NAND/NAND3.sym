@@ -1,0 +1,31 @@
+USER SYMBOL by DSCH 3.5
+DATE 27-11-2022 11:39:13
+SYM  #NAND3
+BB(0,0,40,40)
+TITLE 10 -7  #NAND3
+MODEL 6000
+REC(5,5,30,30)
+PIN(0,10,0.00,0.00)IN3
+PIN(0,20,0.00,0.00)IN2
+PIN(0,30,0.00,0.00)IN1
+PIN(40,10,2.00,1.00)OUT
+LIG(0,10,5,10)
+LIG(0,20,5,20)
+LIG(0,30,5,30)
+LIG(35,10,40,10)
+LIG(5,5,5,35)
+LIG(5,5,35,5)
+LIG(35,5,35,35)
+LIG(35,35,5,35)
+VLG module sym10( IN3,IN2,IN1,OUT);
+VLG  input IN3,IN2,IN1;
+VLG  output OUT;
+VLG  wire w2,w7;
+VLG  nmos #(2) nmos_1(OUT,w2,IN2); // 0.3u 0.05u
+VLG  pmos #(2) pmos_2(OUT,vdd,IN3); // 0.5u 0.05u
+VLG  pmos #(2) pmos_3(OUT,vdd,IN2); // 0.5u 0.05u
+VLG  pmos #(2) pmos_4(OUT,vdd,IN1); // 0.5u 0.05u
+VLG  nmos #(1) nmos_5(w7,vss,IN3); // 0.3u 0.05u
+VLG  nmos #(1) nmos_6(w2,w7,IN1); // 0.3u 0.05u
+VLG endmodule
+FSYM
