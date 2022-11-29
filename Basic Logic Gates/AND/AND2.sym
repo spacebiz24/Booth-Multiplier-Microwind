@@ -1,0 +1,33 @@
+DSCH 3.8
+VERSION 26-11-2022 20:17:19
+BB(0,0,40,30)
+SYM  #sym9
+BB(0,0,40,30)
+TITLE 10 -7  #AND2
+MODEL 6000
+PROP                                                                                                                                   
+REC(5,5,30,20,r)
+VIS 5
+PIN(0,10,0.000,0.000)in2
+PIN(0,20,0.000,0.000)in1
+PIN(40,10,2.000,1.000)out1
+LIG(0,10,5,10)
+LIG(0,20,5,20)
+LIG(35,10,40,10)
+LIG(5,5,5,25)
+LIG(5,5,35,5)
+LIG(35,5,35,25)
+LIG(35,25,5,25)
+VLG module sym9( in2,in1,out1);
+VLG input in2,in1;
+VLG output out1;
+VLG wire w4,w5,;
+VLG nmos #(1) nmos_1(w4,vss,in1); // 0.3u 0.05u
+VLG pmos #(2) pmos_2(w5,vdd,in2); // 0.5u 0.05u
+VLG pmos #(2) pmos_3(w5,vdd,in1); // 0.5u 0.05u
+VLG nmos #(2) nmos_4(w5,w4,in2); // 0.3u 0.05u
+VLG nmos #(1) nmos_5(out1,vss,w5); // 0.3u 0.05u
+VLG pmos #(1) pmos_6(out1,vdd,w5); // 0.5u 0.05u
+VLG endmodule
+FSYM
+FFIG S:\Software Save Files\Schematics\AND2.sym
