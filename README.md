@@ -25,5 +25,5 @@ Building-Blocks-MWoC --> Booth-Decoder
 Building-Blocks-MWoC --> Booth-Encoder
 Building-Blocks-MWoC --> RCA6
 ```
-
+___
 Made with :heart: by [Eloquencere](https://github.com/Eloquencere), [Tejas-M-Nayak](https://github.com/Tejas-M-Nayak), [spacebiz24](https://github.com/spacebiz24)
